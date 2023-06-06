@@ -1,0 +1,18 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        stage ("Creacion fichero")
+        {
+            steps
+            {
+                script
+                {
+                    def contenido = "Rubén Blades Bellido de Luna Díaz (Ciudad de Panamá, 16 de julio de 1948) es un cantautor, músico, actor, abogado, político y activista panameño. Ha desarrollado gran parte de su carrera artística en la ciudad de Nueva York.\nSus discos más exitosos los realizó junto a Willie Colón para el sello discográfico Fania durante el boom de la salsa."
+                    writeFile(file: "salida_ejercicio_3.txt", text: contenido)
+                }
+            }
+        }
+    }
+}
