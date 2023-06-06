@@ -10,5 +10,12 @@ pipeline
                 echo "Hola mundo!"
             }
         }
+        stage("copiar fichero")
+        {
+            steps
+            {
+                bat 'move "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\PPL_8_SCM_integracion_GIT\\README.md" "C:\\"'
+            }
+        }
     }
 }
