@@ -1,0 +1,9 @@
+pipeline{
+agent any
+stages{
+stage('exito'){
+steps{
+script{
+def cadena ='Lo estas haciendo de maravilas!'
+echo cadena
+}}}}}
